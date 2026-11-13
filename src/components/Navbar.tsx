@@ -1,15 +1,16 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface NavItem {
   label: string;
-  href: string;
+  to: string;
 }
 
 const navLinks: NavItem[] = [
-  { label: 'Home', href: '#hero-section' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
+  { label: 'Home', to: '/' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'Services', to: '/services' },
+  { label: 'About', to: '/about' },
 ];
 
 export default function Navbar() {
@@ -21,28 +22,28 @@ export default function Navbar() {
         <nav className="py-3.5">
           <div className="flex items-center justify-between">
             {/* Brand / Nama */}
-            <a href="#" className="font-clash text-xl font-semibold tracking-tight text-black">
+            <Link to="/" className="font-clash text-xl font-semibold tracking-tight text-black">
               Adi Rizki
-            </a>
+            </Link>
 
             {/* Menu Desktop */}
             <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-600">
               {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="hover:text-black transition">
+                <li key={link.to}>
+                  <Link to={link.to} className="hover:text-black transition">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
 
             {/* Tombol CTA Desktop */}
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="hidden md:inline-flex items-center bg-black text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-neutral-800 transition"
             >
               Let&apos;s Talk
-            </a>
+            </Link>
 
             {/* Tombol Hamburger Menu (Mobile) */}
             <button
@@ -70,25 +71,25 @@ export default function Navbar() {
           <div className="md:hidden absolute left-4 right-4 top-full mt-2 bg-black/95 backdrop-blur-md text-white rounded-3xl p-6 border border-neutral-800 shadow-2xl z-50">
             <ul className="flex flex-col gap-4 text-base text-neutral-300">
               {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
                     onClick={() => setIsOpen(false)}
                     className="block py-1 hover:text-white transition"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
             <div className="mt-5 pt-4 border-t border-neutral-800">
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 onClick={() => setIsOpen(false)}
                 className="block w-full text-center bg-white text-black font-medium py-3 rounded-full hover:bg-neutral-200 transition"
               >
                 Let&apos;s Talk
-              </a>
+              </Link>
             </div>
           </div>
         )}

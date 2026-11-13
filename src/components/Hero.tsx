@@ -1,4 +1,5 @@
-import heroAvatar from '../assets/images/hero-avatar.png';
+import heroAvatar from "../assets/images/hero-avatar.png";
+import ShinyText from "./ShinyText";
 
 interface StatItem {
   value: string;
@@ -6,9 +7,9 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { value: '4+', label: 'Years of experience' },
-  { value: '50+', label: 'Project Completed' },
-  { value: '20+', label: 'Satisfied Clients' },
+  { value: "4+", label: "Years of experience" },
+  { value: "50+", label: "Project Completed" },
+  { value: "20+", label: "Satisfied Clients" },
 ];
 
 export default function Hero() {
@@ -27,12 +28,16 @@ export default function Hero() {
                 <p className="text-white text-center md:text-left md:text-xl">
                   Hallo, I&apos;m Adi Rizki
                 </p>
+
                 <h1 className="font-clash font-medium text-[40px] sm:text-[68px] md:text-[72px] lg:text-[84px] xl:text-[93px] leading-[100%] text-gradient-silver text-center md:text-left">
-                  Designer &amp; Developer
+                  <ShinyText text="Designer &" speed={4} />
+                  <br />
+                  <ShinyText text="Developer" speed={4} />
                 </h1>
                 {/* Deskripsi versi MOBILE */}
                 <p className="flex text-white text-center sm:w-75 sm:mx-auto md:hidden">
-                  I design intuitive digital experiences that connect people, products, and brands.
+                  I design intuitive digital experiences that connect people,
+                  products, and brands.
                 </p>
               </div>
               <a
@@ -45,7 +50,8 @@ export default function Hero() {
 
             {/* Deskripsi versi DESKTOP */}
             <p className="hidden md:block text-white/80 text-sm max-w-sm leading-relaxed">
-              I design intuitive digital experiences that connect people, products, and brands.
+              I design intuitive digital experiences that connect people,
+              products, and brands.
             </p>
           </div>
 

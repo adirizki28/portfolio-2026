@@ -5,6 +5,7 @@ import project3Img from '../assets/images/project-3.png';
 // Import gambar proyek lainnya di sini, atau gunakan URL string jika sudah dari Dashboard/Cloud
 
 export interface Project {
+  image_url?: string;
   id: string;
   title: string;
   category: string;
