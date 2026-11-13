@@ -32,11 +32,15 @@
   font-display: swap;
 }
 
-@theme {
+ :root {
   --font-clash: "Clash Display", sans-serif;
 }
 
-@utility text-gradient-silver {
+.font-clash {
+  font-family: var(--font-clash);
+}
+
+.text-gradient-silver {
   background: linear-gradient(117deg, #FFF 23.69%, #999 76.31%);
   -webkit-background-clip: text;
   background-clip: text;

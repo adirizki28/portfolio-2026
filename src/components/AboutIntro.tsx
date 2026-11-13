@@ -10,7 +10,7 @@ export default function About() {
               texts={["Design Driven  By Purpose & Precision"]}
               typingSpeed={80}
               loop={false}
-              className="lg:w-[420px]"
+              className="lg:w-105"
             />
           </h2>
         </div>

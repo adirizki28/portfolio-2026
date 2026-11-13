@@ -42,7 +42,7 @@ export default function Hero() {
               </div>
               <a
                 href="#contact"
-                className="flex w-fit px-4 py-2 md:px-7 md:py-3.5 bg-orange-500 text-black font-medium rounded-[8px] justify-center mx-auto md:mx-0 hover:bg-orange-300 transition"
+                className="flex w-fit px-4 py-2 md:px-7 md:py-3.5 bg-orange-500 text-black font-medium rounded-lg justify-center mx-auto md:mx-0 hover:bg-orange-300 transition"
               >
                 Hire Me
               </a>
@@ -73,7 +73,7 @@ export default function Hero() {
           <img
             src={heroAvatar}
             alt="Adi Rizki"
-            className="absolute place-items-center bottom-0 right-3 sm:w-100 sm:right-30 md:w-125 md:right-3.75 lg:right-8 lg:w-[50%] lg:max-w-[630px] object-cover pointer-events-none"
+            className="absolute place-items-center bottom-0 right-3 sm:w-100 sm:right-30 md:w-125 md:right-3.75 lg:right-8 lg:w-[50%] lg:max-w-157.5 object-cover pointer-events-none"
           />
         </div>
       </div>
